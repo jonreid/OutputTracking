@@ -13,7 +13,7 @@ But we still need a way to capture data. [Output Tracking](https://www.jamesshor
 ## Why OutputTracking Instead of Mocks?
 
 - **More realistic** — Tests verify actual behavior, not fake implementations
-- **Less brittle** — Tests don't break when implementation details change
+- **Less brittle** — Tests don’t break when implementation details change
 - **Easier maintenance** -—No complex mock setups or verification chains
 - **Better coverage** — Tests exercise real code paths
 
@@ -48,6 +48,8 @@ func test_fetchData_url() async throws {
     #expect(urls == ["https://api.example.com"])
 }
 ```
+
+(Wondering how to prevent an actual network call during testing? That’s where [nullables](https://www.jamesshore.com/v2/projects/nullables/testing-without-mocks#nullables) come in. Instead of directly instantiating NetworkService, we would use two factory methods: `create()` for full functionality, and `createNull()` for partial functionality that does everything except the network call.)
 
 ## Core Components
 
