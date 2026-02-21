@@ -1,5 +1,7 @@
 # OutputTracking
 
+[![Build Status](https://github.com/jonreid/OutputTracking/actions/workflows/build.yml/badge.svg)](https://github.com/jonreid/OutputTracking/actions/workflows/build.yml)
+
 **Replace mocks with tracked output in your Swift tests.**
 
 Spies (some call them “mocks”) are a way to write interaction tests. They answer, “Did the System Under Test call the right function in this dependency, passing the right arguments?”
