@@ -8,11 +8,13 @@ actor OutputRegistry {
     func track(_ data: Any) {
         logs.forEach { $0.add(data) }
     }
+
     func registeredLog() -> OutputLog {
         let log = OutputLog(outputRegistry: self)
         logs.append(log)
         return log
     }
+
     func remove(_ outputLog: OutputLog) {
         logs.removeAll { $0 === outputLog }
     }
