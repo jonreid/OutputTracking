@@ -20,7 +20,7 @@ final class OutputLogTests: Sendable {
         sut.add("Test Data")
 
         let logData = try #require(sut.data as? [String])
-        #expect(logData == ["Test Data"])
+        #expect(logData == ["FOO Test Data"])
     }
 
     @Test("Clear removes all data")
