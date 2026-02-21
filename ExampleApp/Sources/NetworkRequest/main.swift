@@ -4,30 +4,18 @@ import NetworkRequestLibrary
 @main
 struct NetworkRequestApp {
     static func main() async {
-        print("Network Request Example")
-        print("======================")
+        let searchTerm = "out from boneville"
+        print("Searching for books with terms: \(searchTerm)")
         
-        let service = NetworkService()
-        let output = await service.trackOutput()
-        
-        let urls = [
-            "https://api.example.com/users",
-            "https://api.example.com/posts",
-            "https://api.example.com/comments"
-        ]
-        
-        for url in urls {
-            await service.fetchData(from: url)
+        let service = NetworkService.create()
+        do {
+            let (data, response) = try await service.searchForBook(terms: searchTerm)
+            let httpResponse = response as! HTTPURLResponse
+            let jsonString = String(decoding: data, as: UTF8.self)
+            print("HTTP Status: \(httpResponse.statusCode)")
+            print("Response received: \(jsonString.prefix(1000))...")
+        } catch {
+            print("Search failed: \(error)")
         }
-        
-        // Show tracked output
-        if let trackedUrls = output.data as? [String] {
-            print("\nTracked URLs:")
-            for (index, url) in trackedUrls.enumerated() {
-                print("\(index + 1). \(url)")
-            }
-        }
-        
-        print("\nDone!")
     }
 }

@@ -4,6 +4,7 @@ import PackageDescription
 
 let package = Package(
     name: "NetworkRequest",
+    platforms: [.macOS(.v12)],
     products: [
         .executable(name: "NetworkRequest", targets: ["NetworkRequest"]),
         .library(name: "NetworkRequestLibrary", targets: ["NetworkRequestLibrary"]),
@@ -19,7 +20,7 @@ let package = Package(
             name: "NetworkRequestLibrary",
             dependencies: ["OutputTracking"]),
         .testTarget(
-            name: "NetworkRequestTests",
+            name: "NetworkRequestLibraryTests",
             dependencies: ["NetworkRequestLibrary"]),
     ]
 )
