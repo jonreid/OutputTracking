@@ -2,6 +2,9 @@ name: Build
 
 on:
   workflow_dispatch:
+  schedule:
+    # each 5th day of month
+    - cron: "0 0 5 * *"
   push:
     branches: [ main ]
   pull_request:
