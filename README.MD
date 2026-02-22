@@ -65,9 +65,9 @@ A collection that captures tracked data. Each log receives all data broadcast by
 
 ### Usage Pattern
 
-1. Create an OutputRegistry in your type
+1. Create an `OutputRegistry` in your type
 2. Call `await outputRegistry.track(data)` when interesting events happen
-3. Tests ask the type for an OutputLog before exercising the system
+3. Tests ask the type for an `OutputLog` before exercising the system
 4. Verify the captured data in your tests
 
 ## Installation
