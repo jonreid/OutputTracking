@@ -1,6 +1,10 @@
 import Foundation
 import NetworkRequestLibrary
 
+#if canImport(FoundationNetworking)
+import FoundationNetworking
+#endif
+
 @main
 struct NetworkRequestApp {
     static func main() async {
