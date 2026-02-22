@@ -51,7 +51,7 @@ func test_fetchData_url() async throws {
 }
 ```
 
-(Wondering how to prevent an actual network call during testing? That’s where [nullables](https://www.jamesshore.com/v2/projects/nullables/testing-without-mocks#nullables) come in. Instead of directly instantiating NetworkService, we would use two factory methods: `create()` for full functionality, and `createNull()` for partial functionality that does everything except the network call.)
+(Wondering how to prevent an actual network call during testing? That’s where [nullables](https://www.jamesshore.com/v2/projects/nullables/testing-without-mocks#nullables) come in. Instead of directly instantiating NetworkService, we would use two factory methods: `create()` for full functionality, and `createNull()` that “disables all external communication, but behaves normally in every other respect.”
 
 ## Core Components
 
