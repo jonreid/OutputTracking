@@ -78,7 +78,7 @@ Add to your Package.swift dependencies:
 .package(url: "https://github.com/jonreid/OutputTracking.git", from: "1.0.0")
 ```
 
-Then add "OutputTracking" to your _production code_ dependencies, not your test dependencies.
+Then add `"OutputTracking"` to your _production code_ dependencies, not your test dependencies.
 
 ## About the Author
 
