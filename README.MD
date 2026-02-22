@@ -12,6 +12,9 @@ This works. But it requires introducing a protocol (or closure), and testing aga
 
 But we still need a way to capture data. [Output Tracking](https://www.jamesshore.com/v2/projects/nullables/testing-without-mocks#output-tracking) is a simple output system designed for testing.
 
+<!-- toc -->
+<!-- endToc -->
+
 ## Why OutputTracking Instead of Mocks?
 
 - **More realistic** — Tests verify actual behavior, not fake implementations
