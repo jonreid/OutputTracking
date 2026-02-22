@@ -16,7 +16,7 @@ But we still need a way to capture data. [Output Tracking](https://www.jamesshor
 
 - **More realistic** — Tests verify actual behavior, not fake implementations
 - **Less brittle** — Tests don’t break when implementation details change
-- **Easier maintenance** -—No complex mock setups or verification chains
+- **Easier maintenance** — No complex mock setups or verification chains
 - **Better coverage** — Tests exercise real code paths
 
 ## Quick Start
