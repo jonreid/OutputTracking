@@ -5,7 +5,7 @@ set -euo pipefail
 TMP_OUTPUT=$(mktemp)
 
 echo -n "Running OutputTracking tests… "
-if script -q /dev/null swift test  > "$TMP_OUTPUT" 2>&1; then
+if swift test  > "$TMP_OUTPUT" 2>&1; then
   echo "passed."
 else
   echo ""
@@ -16,7 +16,7 @@ else
 fi
 
 echo -n "Running ExampleApp tests… "
-if cd ExampleApp && script -q /dev/null swift test  > "$TMP_OUTPUT" 2>&1; then
+if cd ExampleApp; swift test  > "$TMP_OUTPUT" 2>&1; then
   echo "passed."
 else
   echo ""
