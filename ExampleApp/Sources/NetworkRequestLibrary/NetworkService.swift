@@ -1,6 +1,10 @@
 import Foundation
 import OutputTracking
 
+#if canImport(FoundationNetworking)
+import FoundationNetworking
+#endif
+
 public class NetworkService {
     private let useRealSession: Bool
     private let outputRegistry = OutputRegistry()
