@@ -1,6 +1,8 @@
 # OutputTracking
 
 [![Build Status](https://github.com/jonreid/OutputTracking/actions/workflows/build.yml/badge.svg)](https://github.com/jonreid/OutputTracking/actions/workflows/build.yml)
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fjonreid%2FOutputTracking%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/jonreid/OutputTracking)
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fjonreid%2FOutputTracking%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/jonreid/OutputTracking)
 
 **Replace mocks with tracked output in your Swift tests.**
 
